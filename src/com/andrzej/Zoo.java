@@ -1,5 +1,6 @@
 package com.andrzej;
 
+import com.andrzej.Interfaces.Moveable;
 import com.andrzej.animals.Cangaroo;
 import com.andrzej.animals.Dog;
 import com.andrzej.animals.Elephant;
@@ -16,23 +17,60 @@ public class Zoo {
 	private ArrayList<Elephant> allElephants = new ArrayList<>();
 	private ArrayList<Cangaroo> allCangaroos = new ArrayList<>();
 
+	private ArrayList<Moveable> moveables = new ArrayList<>(); //we initialize interface in arraylist. next we used it in method runAnimalsByInterfaceRef
+
 	public void init() {
 
+
+		Dog dog = new Dog();
 		allDogs.add(new Dog());
+
+		Elephant elephant = new Elephant();
 		allElephants.add(new Elephant());
+
+		Cangaroo cangaroo = new Cangaroo();
 		allCangaroos.add(new Cangaroo());
+
+		moveables.add(dog);
+		moveables.add(elephant);
+		moveables.add(cangaroo);
 
 	}
 
 	public void runAllAnimals() {
-		for (Dog dog: allDogs) {
+		for (Dog dog : allDogs) {
 			dog.run();
 		}
-		for (Elephant elephant: allElephants) {
+		for (Elephant elephant : allElephants) {
 			elephant.run();
 		}
-		for (Cangaroo cangaroo: allCangaroos) {
+		for (Cangaroo cangaroo : allCangaroos) {
 			cangaroo.run();
+		}
+	}
+
+	public void hideAllAnimals() {
+		for (Dog dog : allDogs) {
+			dog.hide();
+		}
+		for (Elephant elephant : allElephants) {
+			elephant.hide();
+		}
+		for (Cangaroo cangaroo : allCangaroos) {
+			cangaroo.hide();
+		}
+
+	}
+
+	public void runAnimalsByInterfaceRef() {
+		for (Moveable moveable : moveables) {
+			moveable.run();
+		}
+	}
+
+	public void hideAnimalsByInterfaceRef() {
+		for (Moveable moveable : moveables) {
+			moveable.hide();
 		}
 	}
 

@@ -25,6 +25,11 @@ public class Main {
 		zooKrakow.init();
 
 		zooKrakow.runAllAnimals(); //method created in zoo class, that initialize methods from interface on all elements of an array
+		zooKrakow.hideAllAnimals();
 
+		System.out.println("-------------");
+		zooKrakow.runAnimalsByInterfaceRef(); //this method is much shorter than the previous ones
+		System.out.println();
+		zooKrakow.hideAnimalsByInterfaceRef();
 	}
 }
