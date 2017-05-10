@@ -4,8 +4,6 @@ import com.andrzej.animals.Cangaroo;
 import com.andrzej.animals.Dog;
 import com.andrzej.animals.Elephant;
 
-import java.util.ArrayList;
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -27,9 +25,14 @@ public class Main {
 		zooKrakow.runAllAnimals(); //method created in zoo class, that initialize methods from interface on all elements of an array
 		zooKrakow.hideAllAnimals();
 
-		System.out.println("-------------");
+		System.out.println("------RUN AND HIDE ANIMALS INTERFACE METHODS FROM MOVEABLE INTERFACE-------");
 		zooKrakow.runAnimalsByInterfaceRef(); //this method is much shorter than the previous ones
 		System.out.println();
 		zooKrakow.hideAnimalsByInterfaceRef();
+
+		System.out.println();
+		System.out.println("--------MAKE NOISE FROM AUDIBLE INTERFACE---------");
+		zooKrakow.makeNoiseAllAnimalsByInterfaceRef();
+
 	}
 }

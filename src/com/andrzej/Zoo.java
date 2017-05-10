@@ -1,5 +1,6 @@
 package com.andrzej;
 
+import com.andrzej.Interfaces.Audible;
 import com.andrzej.Interfaces.Moveable;
 import com.andrzej.animals.Cangaroo;
 import com.andrzej.animals.Dog;
@@ -19,6 +20,8 @@ public class Zoo {
 
 	private ArrayList<Moveable> moveables = new ArrayList<>(); //we initialize interface in arraylist. next we used it in method runAnimalsByInterfaceRef
 
+	private ArrayList<Audible> audibles = new ArrayList<>();
+
 	public void init() {
 
 
@@ -34,6 +37,10 @@ public class Zoo {
 		moveables.add(dog);
 		moveables.add(elephant);
 		moveables.add(cangaroo);
+
+		audibles.add(dog);
+		audibles.add(elephant);
+		audibles.add(cangaroo);
 
 	}
 
@@ -71,6 +78,11 @@ public class Zoo {
 	public void hideAnimalsByInterfaceRef() {
 		for (Moveable moveable : moveables) {
 			moveable.hide();
+		}
+	}
+	public void makeNoiseAllAnimalsByInterfaceRef() {
+		for (Audible audible : audibles) {
+			audible.makeNoise();
 		}
 	}
 

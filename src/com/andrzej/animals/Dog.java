@@ -6,7 +6,7 @@ import com.andrzej.Interfaces.Moveable;
 /**
  * Created by andrzej on 10.05.17.
  */
-public class Dog implements Moveable {
+public class Dog implements Moveable, Audible {
 
 		//override is generated automatically to provide arguments. without override class will not use method from interface moveable
 	@Override
@@ -18,5 +18,10 @@ public class Dog implements Moveable {
 	@Override
 	public void hide() {
 		System.out.println("Dog is hidden");
+	}
+
+	@Override
+	public void makeNoise() {
+		System.out.println(this.getClass().getSimpleName() + " is making noise");
 	}
 }
